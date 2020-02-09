@@ -17,8 +17,8 @@ create table ToDoList
 );
 create table Categories
 (
-    id   int primary key  auto_increment ,
-    name varchar(255) unique not null
+    id   int primary key  auto_increment,
+    name varchar(255) unique
 );
 
 create table Status
