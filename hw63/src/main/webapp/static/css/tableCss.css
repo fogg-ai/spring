@@ -1,0 +1,20 @@
+
+.allToDo td{
+    border: 2px solid transparent;
+    border-left: ridge #4b4b4b;
+    border-right: ridge #4b4b4b;
+    padding: 0 20px 0 20px;
+    border-collapse: collapse;
+
+    box-shadow: 0 0 5px 2px #505050;
+}
+.allToDo th{
+    border: 2px solid transparent;
+    border-left: ridge #4b4b4b;
+    border-right: ridge #4b4b4b;
+    padding: 0 20px 0 20px;
+    border-collapse: collapse;
+    text-shadow: 2px 2px 0px rgb(255, 255, 255);
+    box-shadow: 0 0 5px 2px #505050;
+
+}
