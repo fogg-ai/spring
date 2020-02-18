@@ -1,5 +1,6 @@
 package org.itstep.data;
 
+import org.itstep.model.Group;
 import org.itstep.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
@@ -25,7 +26,21 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
 
     @Override
     public Integer save(Student data) {
+        List<Group> query = jdbcTemplate.query("select id, group_name from `group`",
+                (rs, rowNum) -> new Group(rs.getInt("id"),
+                        rs.getString("group_name")));
+        int groupId = 0;
+        for (int i = 0;i < query.size();i++){
+            if(query.get(i).getGroupName().equals(data.getGroup())){
+                groupId = query.get(i).getId();
+            }else {
+                System.out.println("Нету id с такой группой.");
+            }
+        }
+
         GeneratedKeyHolder holder = new GeneratedKeyHolder();
+
+        int finalGroupId = groupId;
         jdbcTemplate.update(con -> {
             PreparedStatement ps =
                     con.prepareStatement("insert into students(first_name, last_name, age, `group`) values(?, ?, ?, ?)",
@@ -33,7 +48,7 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
             ps.setString(1, data.getFirstName());
             ps.setString(2, data.getLastName());
             ps.setInt(3, data.getAge());
-            ps.setString(4, data.getGroup());
+            ps.setInt(4, finalGroupId);
             return ps;
         }, holder);
         return Objects.requireNonNull(holder.getKey()).intValue();
@@ -41,6 +56,19 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
 
     @Override
     public void update(Student data) {
+        List<Group> query = jdbcTemplate.query("select id, group_name from `group`",
+                (rs, rowNum) -> new Group(rs.getInt("id"),
+                        rs.getString("group_name")));
+        int groupId = 0;
+        for (int i = 0;i < query.size();i++){
+            if(query.get(i).getGroupName().equals(data.getGroup())){
+                groupId = query.get(i).getId();
+                break;
+            }else {
+                groupId = 0;
+            }
+        }
+
         Student student = null;
         try {
             student = jdbcTemplate.queryForObject("Select id, first_name, last_name, age, `group` from students where id = ?", new Object[]{data.getId()}, (ResultSet resultSet, int rowNum) -> new Student(resultSet.getInt("id"),
@@ -52,7 +80,10 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
             System.out.println(dataAccessException.getMessage());
         }
 
+        int finalGroupId = groupId;
         Student finalStudent = student;
+
+
         jdbcTemplate.update(con -> {
             PreparedStatement ps =
                     con.prepareStatement("UPDATE students set first_name = ?, last_name = ?, age = ?, `group` = ? where id = ?",Statement.NO_GENERATED_KEYS);
@@ -71,14 +102,15 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
             }else {
                 ps.setInt(3, data.getAge());
             }
-            if("".equals(data.getGroup())) {
-                ps.setString(4, finalStudent.getGroup());
+            if(!"".equals(data.getGroup()) && finalGroupId != 0) {
+                ps.setString(4, String.valueOf(finalGroupId));
             }else {
-                ps.setString(4, data.getGroup());
+                ps.setString(4, finalStudent.getGroup());
             }
             ps.setInt(5, data.getId());
             return ps;
         });
+
     }
 
     @Override
@@ -88,19 +120,19 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
 
     @Override
     public List<Student> findAll() {
-        return jdbcTemplate.query("select id, first_name, last_name, age, `group` from students",
+        return jdbcTemplate.query("select students.id, first_name, last_name, age, `group`, group_name from students join `group` g on students.`group` = g.id",
                 (rs, rowNum) -> new Student(rs.getInt("id"),
                         rs.getString("first_name"),
                         rs.getString("last_name"),
                         rs.getInt("age"),
-                        rs.getString("group")));
+                        rs.getString("group_name")));
     }
 
     @Override
     public Student find(Integer id) {
         Student student = null;
         try {
-            student = jdbcTemplate.queryForObject("Select id, first_name, last_name, age, `group` from students where id = ?", new Object[]{id}, (ResultSet resultSet, int rowNum) -> new Student(resultSet.getInt("id"),
+            student = jdbcTemplate.queryForObject("Select students.id, first_name, last_name, age, `group` from students where id = ?", new Object[]{id}, (ResultSet resultSet, int rowNum) -> new Student(resultSet.getInt("id"),
                     resultSet.getString("first_name"),
                     resultSet.getString("last_name"),
                     resultSet.getInt("age"),

@@ -1,6 +1,9 @@
 package org.itstep.controller;
 
+
+import org.itstep.data.GroupRepository;
 import org.itstep.data.StudentRepository;
+import org.itstep.model.Group;
 import org.itstep.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,64 +14,63 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-@RequestMapping("/students")
+@RequestMapping("/group")
 @Controller
-public class StudentController {
+public class GroupController {
+    GroupRepository repository;
 
-    StudentRepository repository;
 
     @Autowired
-    public StudentController(StudentRepository repository) {
+    public GroupController(GroupRepository repository) {
         this.repository = repository;
     }
 
     @GetMapping
     public String index(Model model) {
-        model.addAttribute("students", repository.findAll());
-        return "students/index";
+        model.addAttribute("groups", repository.findAll());
+        return "group/index";
     }
 
     @GetMapping("/new")
     public String createStudent() {
-        return "students/create";
+        return "group/create";
     }
 
     @PostMapping("/new")
-    public String createStudent(Student student, RedirectAttributes redirectAttributes) {
+    public String createStudent(Group group, RedirectAttributes redirectAttributes) {
         String message = "";
         int id = 0;
         try {
-            id = repository.save(student);
+            id = repository.save(group);
             message = "successfully saved";
-        } catch(Exception ex) {
-            System.out.println(ex.getLocalizedMessage());
+        } catch (Exception ex) {
             message = "some error";
         }
         redirectAttributes.addFlashAttribute("error", message);
-        System.out.println(student);
-        return "redirect:/students/info/" + id;
+        return "redirect:/group/info/" + id;
     }
 
     @GetMapping("/info/{id}")
     public String info(@PathVariable int id, Model model) {
-        model.addAttribute("student", repository.find(id));
-        return "students/info";
+        model.addAttribute("groups", repository.find(id));
+        return "group/info";
     }
 
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("student", repository.delete(repository.find(id)));
-        return "redirect:/students";
+        System.out.println(id);
+        model.addAttribute("groups", repository.delete(repository.find(id)));
+        return "redirect:/group";
     }
 
     @GetMapping("/update/{id}")
     public String update() {
-        return "students/update";
+        return "group/update";
     }
 
     @PostMapping("/update/{id}")
-    public String update(Student student) {
-        repository.update(student);
-        return "redirect:/students";
+    public String update(Group group) {
+        repository.update(group);
+        return "redirect:/group";
     }
 }

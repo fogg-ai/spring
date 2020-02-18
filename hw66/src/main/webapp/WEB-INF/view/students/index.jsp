@@ -9,7 +9,8 @@
 </head>
 <body>
     <h1>Students</h1>
-    <p><a href="<spring:url value="/students/new"/>">Create student</a> </p>
+    <p><a href="<spring:url value="/students/new"/>">Create student</a>
+        <a href="<spring:url value="/group"/>">Group List</a></p>
 <table>
     <thead>
         <tr>
@@ -17,7 +18,7 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Age</th>
-            <th>Group</th>
+            <th>Group Name</th>
             <th>Action</th>
         </tr>
     </thead>

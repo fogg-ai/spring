@@ -11,7 +11,7 @@
 <form method="post">
     <div>
         <label for="firstName">New first name: </label>
-        <input name="firstName" id="firstName" />
+        <input name="firstName" id="firstName" required/>
     </div>
     <div>
         <label for="lastName">New last name: </label>
@@ -19,11 +19,11 @@
     </div>
     <div>
         <label for="age">New age: </label>
-        <input name="age" id="age" type="number" min="8" max="60" />
+        <input name="age" id="age" type="number" min="8" max="60" required />
     </div>
 
     <div>
-        <label for="group">New group: </label>
+        <label for="group">New group name: </label>
         <input name="group" id="group" />
     </div>
 

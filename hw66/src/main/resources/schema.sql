@@ -6,5 +6,11 @@ create table students (
                           first_name varchar(255) not null,
                           last_name varchar(255) not null,
                           age int not null,
-                          `group` varchar(255) not null
+                          `group` int not null ,
+                          FOREIGN KEY (`group`) REFERENCES `group`(id)
 );
+
+create table `group`(
+                          id int primary key auto_increment,
+                          group_name varchar(255) UNIQUE not null
+  );

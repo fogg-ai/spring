@@ -10,6 +10,7 @@
 
 <p>
     <a href="<spring:url value="/students"/>">Students</a>
+    <a href="<spring:url value="/group"/>">Group</a>
 </p>
 </body>
 </html>
