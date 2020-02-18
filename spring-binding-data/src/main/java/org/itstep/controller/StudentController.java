@@ -46,8 +46,8 @@ public class StudentController {
     }
 
     @GetMapping("/delete/{id}")
-    public String deleteStudent(@PathVariable int id){
-        repository.delete(repository.find(id));
+    public String deleteStudent(@PathVariable int id, Model model){
+        model.addAttribute("student", repository.delete(repository.find(id)));
         return "redirect:/students";
     }
 
