@@ -1,0 +1,29 @@
+* {
+    font-family: cursive;
+}
+label {
+    width: 100px;
+}
+input {
+    width: 150px;
+}
+label, input {
+    display: inline-block;
+}
+
+form > div {
+    margin-top: 16px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+h1 {
+    text-align: center;
+}
