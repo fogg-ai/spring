@@ -69,7 +69,7 @@ public class GroupRepository implements org.itstep.data.Repository<Group, Intege
             return ps;
         });
     }
-    @Transactional(isolation = Isolation.REPEATABLE_READ, rollbackFor = SQLException.class, noRollbackFor = FileNotFoundException.class)
+    @Transactional(isolation = Isolation.REPEATABLE_READ, rollbackFor = SQLException.class)
     @Override
     public boolean delete(Group data) {
         try {

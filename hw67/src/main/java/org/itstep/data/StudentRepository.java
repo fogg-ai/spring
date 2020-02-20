@@ -116,7 +116,7 @@ public class StudentRepository implements org.itstep.data.Repository<Student, In
         });
 
     }
-    @Transactional(isolation = Isolation.REPEATABLE_READ, rollbackFor = SQLException.class, noRollbackFor = FileNotFoundException.class)
+    @Transactional(isolation = Isolation.REPEATABLE_READ, rollbackFor = SQLException.class)
     @Override
     public boolean delete(Student data) {
         return jdbcTemplate.update("delete from students where id = ?", data.getId()) > 0;
