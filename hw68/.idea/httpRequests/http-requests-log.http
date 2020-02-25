@@ -1,0 +1,501 @@
+PUT http://localhost:8080/hw68/api/students/1
+Content-Type: application/json
+
+{
+  "firstName": "Вася",
+  "lastName": "Вишнев",
+  "age": 40,
+  "group": "вфів"
+}
+
+<> 2020-02-25T035229.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/students/1
+Content-Type: application/json
+
+{
+  "firstName": "Вася",
+  "lastName": "Вишнев",
+  "age": 40,
+  "group": "віф"
+}
+
+<> 2020-02-25T035223.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/students/1
+Content-Type: application/json
+
+{
+  "firstName": "Вася",
+  "lastName": "Вишнев",
+  "age": 40,
+  "group": "Yert"
+}
+
+<> 2020-02-25T035212.200.json
+
+###
+
+GET http://localhost:8080/hw68/api/students
+Accept: application/json
+
+<> 2020-02-25T035200.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/students/1
+Content-Type: application/json
+
+{
+  "firstName": "Вася",
+  "lastName": "Вишнев",
+  "age": 35,
+  "group": "Yert"
+}
+
+<> 2020-02-25T035153.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "Yert"
+}
+
+<> 2020-02-25T035124.200.json
+
+###
+
+POST http://localhost:8080/hw68/api/groups
+Content-Type: application/json
+
+{
+  "groupName": "Api"
+}
+
+<> 2020-02-25T035116.201.json
+
+###
+
+GET http://localhost:8080/hw68/api/groups
+Accept: application/json
+
+<> 2020-02-25T034906.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "Yert"
+}
+
+<> 2020-02-25T034903.200.json
+
+###
+
+GET http://localhost:8080/hw68/api/groups
+Accept: application/json
+
+<> 2020-02-25T034853.200.json
+
+###
+
+POST http://localhost:8080/hw68/api/groups
+Content-Type: application/json
+
+{
+  "groupName": "Api"
+}
+
+<> 2020-02-25T034851.201.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T034847.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T034626.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T034305.500.html
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T034141.500.html
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T034132.500.html
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033936.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033804.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033713.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033700.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033647.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033440.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033437.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033227.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033214.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033130.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T033126.200.json
+
+###
+
+POST http://localhost:8080/hw68/api/groups
+Content-Type: application/json
+
+{
+  "groupName": "Api"
+}
+
+<> 2020-02-25T033112.201.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+###
+
+GET http://localhost:8080/hw68/api/groups
+Accept: application/json
+
+<> 2020-02-25T032728.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+###
+
+GET http://localhost:8080/hw68/api/groups
+Accept: application/json
+
+<> 2020-02-25T032324.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+###
+
+GET http://localhost:8080/hw68/api/groups
+Accept: application/json
+
+<> 2020-02-25T032314.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+###
+
+GET http://localhost:8080/hw68/api/groups
+Accept: application/json
+
+<> 2020-02-25T031818.200.json
+
+###
+
+GET http://localhost:8080/hw68/api/groups/1
+Accept: application/json
+
+<> 2020-02-25T031814.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+###
+
+POST http://localhost:8080/hw68/api/groups
+Content-Type: application/json
+
+{
+  "groupName": "Api"
+}
+
+<> 2020-02-25T031802.201.json
+
+###
+
+GET http://localhost:8080/hw68/api/groups/1
+Accept: application/json
+
+<> 2020-02-25T031758.200.json
+
+###
+
+GET http://localhost:8080/hw68/api/groups
+Accept: application/json
+
+<> 2020-02-25T031744.200.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+###
+
+POST http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T031427.400.html
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "1233"
+}
+
+<> 2020-02-25T031024.400.html
+
+###
+
+GET http://localhost:8080/hw68/api/groups
+Accept: application/json
+
+<> 2020-02-25T030952.200.json
+
+###
+
+POST http://localhost:8080/hw68/api/groups
+Content-Type: application/json
+
+{
+  "groupName": "Api"
+}
+
+<> 2020-02-25T030950.201.json
+
+###
+
+PUT http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupName": "Api"
+}
+
+<> 2020-02-25T030839.400.html
+
+###
+
+PATCH http://localhost:8080/hw68/api/groups/1
+Content-Type: application/json
+
+{
+  "groupNamePre": "Api",
+  "groupNameNew": "Ge"
+}
+
+###
+

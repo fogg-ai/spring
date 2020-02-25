@@ -1,0 +1,29 @@
+GET http://localhost:8080/hw68/api/groups
+Accept: application/json
+
+###
+GET http://localhost:8080/hw68/api/groups/1
+Accept: application/json
+
+
+###
+DELETE http://localhost:8080/hw68/api/groups/1
+Accept: application/json
+
+###
+POST http://localhost:8080/hw68/api/groups
+Content-Type: application/json
+
+{
+  "groupName": "Api"
+}
+
+###
+PUT http://localhost:8080/hw68/api/groups/2
+Content-Type: application/json
+
+{
+  "groupName": "Yert"
+}
+
+###
