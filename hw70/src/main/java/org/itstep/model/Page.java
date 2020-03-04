@@ -15,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "total_pages",
     "data"
 })
-public class Example {
+public class Page {
 
     @JsonProperty("page")
     private Integer page;
@@ -26,7 +26,7 @@ public class Example {
     @JsonProperty("total_pages")
     private Integer totalPages;
     @JsonProperty("data")
-    private List<Datum> data = new ArrayList<Datum>();
+    private List<Person> data = new ArrayList<Person>();
 
     @JsonProperty("page")
     public Integer getPage() {
@@ -69,12 +69,12 @@ public class Example {
     }
 
     @JsonProperty("data")
-    public List<Datum> getData() {
+    public List<Person> getData() {
         return data;
     }
 
     @JsonProperty("data")
-    public void setData(List<Datum> data) {
+    public void setData(List<Person> data) {
         this.data = data;
     }
 

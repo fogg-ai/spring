@@ -1,7 +1,7 @@
 package org.itstep.api;
 
-import org.itstep.model.Datum;
-import org.itstep.model.Example;
+import org.itstep.model.Person;
+import org.itstep.model.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -22,11 +22,11 @@ public class PersonTemplateApi {
 
     @GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     @ResponseStatus(HttpStatus.OK)
-    public List<Datum> getAllStudents(){
+    public List<Person> getAllPerson(){
         restTemplate = new RestTemplate();
-        ResponseEntity forEntity = restTemplate.getForEntity(URL, Example.class);
-        Example body = (Example) forEntity.getBody();
-        List<Datum> datum = body.getData();
-        return datum;
+        ResponseEntity forEntity = restTemplate.getForEntity(URL, Page.class);
+        Page body = (Page) forEntity.getBody();
+        List<Person> person = body.getData();
+        return person;
     }
 }

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "last_name",
     "avatar"
 })
-public class Datum {
+public class Person {
 
     @JsonProperty("id")
     private Integer id;
