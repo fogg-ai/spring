@@ -58,7 +58,6 @@ public class JsonRestController {
             headers.setContentType(MediaType.APPLICATION_JSON);
 
             HttpEntity<ToDoResp> entity = new HttpEntity<>(ToDoResp, headers);
-            System.out.println(entity.getBody());
             restTemplate.postForLocation(URL, entity);
         }catch (Exception e){
             log.trace(String.valueOf(e));
