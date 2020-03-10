@@ -18,7 +18,6 @@
 </head>
 <body>
 
-<div>${message}</div>
 <spring:url value='/new' var="url"/>
 <form:form method="post" modelAttribute="register" action="${url}">
     <div>
