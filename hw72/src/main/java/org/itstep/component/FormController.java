@@ -33,9 +33,8 @@ public class FormController  {
     }
 
     @PostMapping(path = "/new")
-    public String create(@Validated @ModelAttribute RegisterModel register, BindingResult bindingResult,Model model, RedirectAttributes redirectAttributes) {
+    public String create(@Validated @ModelAttribute RegisterModel register, BindingResult bindingResult,Model model) {
         log.debug(register.toString());
-        String message = "";
         if (bindingResult.hasErrors()) {
             log.debug(bindingResult.toString());
             model.addAttribute("register",register);
