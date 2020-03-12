@@ -18,7 +18,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Constraint(validatedBy = CheckNumberPhoneClass.class)
 @Documented
 public @interface CheckNumberPhone {
-    public static final String MESSAGE = "{org.itstep.validator.password}";
+    public static final String MESSAGE = "{org.itstep.validator.phone}";
 
     String message() default MESSAGE;
 

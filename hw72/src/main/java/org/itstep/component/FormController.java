@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,22 +21,18 @@ import java.util.List;
 public class FormController  {
     public static final Logger log = LoggerFactory.getLogger(FormController.class);
     List<RegisterModel> list = new ArrayList<>();
-    @ModelAttribute(name = "register")
-    public RegisterModel model() {
-        return new RegisterModel();
-    }
 
     @GetMapping
-    public String index() {
+    public String index(Model model) {
+        model.addAttribute("registerModel",new RegisterModel());
         return "index";
     }
 
-    @PostMapping(path = "/new")
-    public String create(@Validated @ModelAttribute RegisterModel register, BindingResult bindingResult,Model model) {
+    @PostMapping(path = "/")
+    public String create(@Validated @ModelAttribute RegisterModel register, BindingResult bindingResult) {
         log.debug(register.toString());
         if (bindingResult.hasErrors()) {
             log.debug(bindingResult.toString());
-            model.addAttribute("register",register);
             return "index";
         }
         try {

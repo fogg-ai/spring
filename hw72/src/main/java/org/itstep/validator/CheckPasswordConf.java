@@ -34,7 +34,7 @@ public class CheckPasswordConf implements
                 if( this.message == null
                         || "".equals( this.message )
                         || CheckPassword.MESSAGE.equals( this.message ) ){
-                    msg = field + " это поле не равно этому " + equalsTo;
+                    msg = field + " это поле не равно" + equalsTo;
                 }
                 context.disableDefaultConstraintViolation();
                 context.buildConstraintViolationWithTemplate( msg )

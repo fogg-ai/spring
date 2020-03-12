@@ -18,8 +18,8 @@
 </head>
 <body>
 
-<spring:url value='/new' var="url"/>
-<form:form method="post" modelAttribute="register" action="${url}">
+<spring:url value='/' var="url"/>
+<form:form method="post" modelAttribute="registerModel" action="${url}">
     <div>
         <form:label path="login">Login: </form:label>
         <form:input path="login" cssErrorClass="error"/>

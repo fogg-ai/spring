@@ -15,10 +15,9 @@ import javax.validation.constraints.Size;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@CheckPassword(field = "password",equalsTo = "passwordСonfirmation")
+@CheckPassword(field = "password",equalsTo = "passwordСonfirmation",message = "Пароли должны совпадать.")
 public class RegisterModel {
     @NotBlank(message = "Заполните поле")
-    @Size(min = 5,max = 15,message = "Введите от 5 символов до 15.")
     private String login;
     @NotBlank(message = "Заполните поле")
     private String password;
@@ -27,7 +26,7 @@ public class RegisterModel {
     @NotBlank(message = "Заполните поле")
     @Email
     private String email;
-    @CheckNumberPhone
+    @CheckNumberPhone(message = "Введите вверный телефон.")
     private String phone;
     @NotBlank
     private String gender;
