@@ -27,12 +27,12 @@
     </div>
     <div>
         <form:label path="password">Password: </form:label>
-        <form:input path="password" cssErrorClass="error"/>
+        <form:input type="password" path="password" cssErrorClass="error"/>
         <form:errors path="password" cssClass="error-message" />
     </div>
     <div>
         <form:label path="passwordСonfirmation">Password Сonfirmation: </form:label>
-        <form:input path="passwordСonfirmation" cssErrorClass="error"/>
+        <form:input type="password" path="passwordСonfirmation" cssErrorClass="error"/>
         <form:errors path="passwordСonfirmation" cssClass="error-message" />
     </div>
 
