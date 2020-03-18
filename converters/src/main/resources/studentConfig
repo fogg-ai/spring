@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.itstep.model.Student" table="Students">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="firstName" column="first_name"/>
+        <property name="lastName" column="last_name"/>
+        <property name="age" column="age"/>
+        <property name="group" column='"group"'/>
+        <property name="birthDate" column="birth_date"/>
+        <property name="typeStudentsCaptain" column="type_students_captain" />
+    </class>
+</hibernate-mapping>
