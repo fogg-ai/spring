@@ -9,7 +9,7 @@ import java.util.Locale;
 public class CheckCaptainFormatter implements Formatter<Enum<IsCaptain>> {
     @Override
     public Enum<IsCaptain> parse(String s, Locale locale) throws ParseException {
-        IsCaptain not = IsCaptain.NOT;
+        IsCaptain not = IsCaptain.STUDENT;
 
         if("on".equals(s)) {
             not = IsCaptain.CAPTAIN;
