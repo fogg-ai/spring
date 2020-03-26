@@ -11,8 +11,8 @@ import java.util.Set;
 
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 //@RequiredArgsConstructor
 public class Teacher {
 

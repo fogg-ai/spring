@@ -11,6 +11,7 @@ import java.util.Set;
 @Entity
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 @RequiredArgsConstructor
 @ToString(exclude = "students")
 public class Group {
@@ -28,6 +29,7 @@ public class Group {
 
     @ManyToMany(mappedBy = "groups", cascade = CascadeType.ALL,  fetch = FetchType.LAZY)
     private Set<Teacher> teachers;
+
 
     @Override
     public boolean equals(Object o) {
