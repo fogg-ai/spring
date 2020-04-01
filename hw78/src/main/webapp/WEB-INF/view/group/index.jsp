@@ -6,12 +6,11 @@
 <%@include file="../include/header.jsp" %>
 
 
-
 <div class="container">
     <h1>${title}</h1>
     <div class="row">
         <div class="row">
-            <form  method="get">
+            <form method="get">
                 <div class="row">
                     <div class="input-field col s6">
                         <input type="text" name="name">Name</input>
@@ -49,6 +48,11 @@
     </div>
     <div class="row">
         <ul class="pagination center-align">
+
+            <c:if test="${page > 1}">
+                <li class="waves-effect"><a href="?page=${page-1}&size=${size-5}"><i class="material-icons">chevron_left</i></a>
+                </li>
+            </c:if>
             <c:forEach begin="${page-1}" end="${page+4}" var="i">
                 <c:if test="${i != 0}">
                     <c:if test="${i == page}">
@@ -59,6 +63,8 @@
                     </c:if>
                 </c:if>
             </c:forEach>
+            <li class="waves-effect"><a href="?page=${page+1}&size=${size+5}"><i
+                    class="material-icons">chevron_right</i></a></li>
         </ul>
     </div>
 
