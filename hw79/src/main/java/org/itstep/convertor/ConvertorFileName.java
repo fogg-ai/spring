@@ -18,7 +18,7 @@ public class ConvertorFileName implements Converter<MultipartFile, String> {
     @Override
     public String convert(MultipartFile file) {
         Resource resource = resourceLoader.getResource("/upload" + File.separator + file.getOriginalFilename());
-        if(!resource.exists()) {
+        if (!resource.exists()) {
             File uploadDir = null;
             try {
                 uploadDir = resource.getFile();

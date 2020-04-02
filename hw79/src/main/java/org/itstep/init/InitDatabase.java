@@ -48,10 +48,10 @@ public class InitDatabase {
         groups.forEach(academyService::save);
 
         // Init students
-        academyService.save(new Student("Вася", "Пупкин", "http://localhost:8080/uploads/[000008].jpg",
+        academyService.save(new Student("Вася", "Пупкин", "http://localhost:8080/uploads/unnamed.jpg",
                             LocalDate.of(2001, 1, 1), groups.get(0)));
 
-        academyService.save(new Student("Маша", "Ефросинина", "11.png",
+        academyService.save(new Student("Маша", "Ефросинина", "http://localhost:8080/uploads/sky.jpg",
                 LocalDate.of(1986, 2, 12), groups.get(0)));
 
 

@@ -43,7 +43,7 @@
                     <td>${s.lastName}</td>
                     <td>${s.groupName}</td>
                     <td>${s.birthDate}</td>
-                    <td><img src="<spring:url value="uploads/${s.photo}"/>" alt="photo" width="130px" height="230px"/></td>
+                    <td><img src="<spring:url value="uploads/${s.photo}"/>" alt="photo" width="200px" height="230px"/></td>
                     <td>
                         <a class="btn" href="<spring:url value="/students/edit/${s.id}"/>">Update
                             <i class="material-icons right">edit</i></a>
