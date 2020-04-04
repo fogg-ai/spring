@@ -24,17 +24,15 @@ import java.util.stream.Collectors;
 @Transactional
 public class AcademyService {
 
-    final UploadFileService uploadFileService;
     final StudentRepository studentRepository;
     final GroupRepository groupRepository;
     final TeacherRepository teacherRepository;
 
     @Autowired
-    public AcademyService(UploadFileService uploadFileService,StudentRepository studentRepository, GroupRepository groupRepository, TeacherRepository teacherRepository) {
+    public AcademyService(StudentRepository studentRepository, GroupRepository groupRepository, TeacherRepository teacherRepository) {
         this.studentRepository = studentRepository;
         this.groupRepository = groupRepository;
         this.teacherRepository = teacherRepository;
-        this.uploadFileService = uploadFileService;
     }
 
     @Transactional(readOnly = true)
