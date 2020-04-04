@@ -70,7 +70,7 @@ public class StudentsController {
 
     @PostMapping("/create")
     public String create(@Validated @ModelAttribute StudentDto studentDto,
-                         BindingResult bindingResult) throws IOException {
+                         BindingResult bindingResult){
         log.debug("Create student: " + studentDto.toString());
         if (!bindingResult.hasErrors()) {
             academyService.save(studentDto);
