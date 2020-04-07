@@ -77,7 +77,7 @@
     </form>
 </div>
 <div>
-    <c:if test="${param.error}">
+<c:if test="${param.error == 'notentry'}">
         Repeat the entry, the data is incorrect.
     </c:if>
 
