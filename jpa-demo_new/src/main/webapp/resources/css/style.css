@@ -1,0 +1,37 @@
+* {
+    font-family: cursive;
+}
+label {
+    width: 100px;
+}
+input {
+    width: 150px;
+}
+label, input {
+    display: inline-block;
+}
+
+form > div {
+    margin-top: 16px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.input-field .helper-text {
+    color: red;
+}
+
+.btn-floating {
+    margin-top: 50px;
+    float:right;
+}
+
+label  {
+    width: 100%;
+}
+
+.modal {
+    width: 450px;
+}

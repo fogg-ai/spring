@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sec="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security https://www.springframework.org/schema/security/spring-security.xsd">
+
+    <sec:http auto-config="true" use-expressions="false">
+        <sec:csrf disabled="true"/>
+        <sec:intercept-url pattern="/students/**" access="ROLE_ADMIN" />
+        <sec:intercept-url pattern="/groups/**" access="ROLE_ADMIN" />
+        <sec:intercept-url pattern="/teachers/**" access="ROLE_ADMIN" />
+        <sec:intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <sec:form-login login-page="/" default-target-url="/" login-processing-url="/login"
+                        username-parameter="custom_username"
+                        password-parameter="custom_password"
+                        authentication-failure-url="/?error=notentry"/>
+        <sec:logout logout-url="/logout" logout-success-url="/" delete-cookies="true"
+                    invalidate-session="true"/>
+
+    </sec:http>
+
+    <sec:authentication-manager>
+        <sec:authentication-provider>
+            <sec:user-service>
+                <sec:user name="admin" password="{noop}admin" authorities="ROLE_ADMIN"/>
+            </sec:user-service>
+        </sec:authentication-provider>
+    </sec:authentication-manager>
+</beans>
