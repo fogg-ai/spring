@@ -3,11 +3,15 @@ package org.itstep.domain;
 import lombok.*;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Past;
 import java.time.LocalDate;
+import java.util.Collection;
 
 @Table(name = "students")
 @Entity
@@ -15,7 +19,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @RequiredArgsConstructor
-public class Student {
+public class Student implements UserDetails {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -62,5 +66,35 @@ public class Student {
     public Student group(Group group) {
         this.group = group;
         return this;
+    }
+
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        return AuthorityUtils.createAuthorityList(role);
+    }
+
+    @Override
+    public String getUsername() {
+        return studentName;
+    }
+
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isAccountNonLocked() {
+        return true;
+    }
+
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return true;
+    }
+
+    @Override
+    public boolean isEnabled() {
+        return true;
     }
 }
