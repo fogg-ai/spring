@@ -1,6 +1,6 @@
 package org.itstep.service.security;
 
-import org.itstep.domain.Group;
+
 import org.itstep.domain.Student;
 import org.itstep.domain.Teacher;
 import org.itstep.repository.StudentRepository;
@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
+
 
 @Component
 public class CustomDetailsService implements UserDetailsService {
@@ -23,17 +23,17 @@ public class CustomDetailsService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+
         Student student = studentRepository.findUserByStudentName(userName);
         Teacher teacher = teacherRepository.findUserByTeacherName(userName);
         if(student != null){
-            return new User(student.getStudentName(),student.getPassword(),
-                    AuthorityUtils.createAuthorityList(student.getRole()));
+            return studentRepository.findUserByStudentName(userName);
         }else if(teacher != null){
-            return new User(teacher.getTeacherName(),teacher.getPassword(),
-                    AuthorityUtils.createAuthorityList(teacher.getRole()));
+            return teacherRepository.findUserByTeacherName(userName);
         }else {
             return new User("admin","{noop}admin",
                     AuthorityUtils.createAuthorityList("ROLE_ADMIN"));
         }
+
     }
 }
