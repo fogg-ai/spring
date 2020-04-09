@@ -1,3 +1,4 @@
+<%@ taglib prefix="secure" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <html>
 <head>
@@ -26,7 +27,7 @@
             <li><a href="<spring:url value="/h2console"/>" target="_blank">H2 Console</a></li>
             <!-- Modal Trigger -->
             <li><a class="waves-effect waves-light modal-trigger" href="#modal1">Sing in</a></li>
-            <li><a class="waves-effect waves-light modal-trigger" href="<spring:url value="logout"/>">Log out</a></li>
+            <li><a class="waves-effect waves-light modal-trigger" href="#modal2">Log out</a></li>
         </ul>
     </div>
     <ul class="sidenav" id="mobile-nav">
@@ -55,9 +56,23 @@
 
     <ul id="logout" class="dropdown-content">
         <li><a href="<spring:url value="logout"/>"><i class="material-icons">group</i>List</a></li>
+
         </ul>
 </nav>
 
+
+<div id="modal2" class="modal">
+    <form action="<spring:url value="/logout"/>" method="POST">
+        <div class="modal-content">
+            Are you sure you want to go log out?
+        </div>
+        <div class="modal-footer">
+            <a type="submit" href="#!" class="modal-close waves-effect waves-green btn">Cancel</a>
+            <button type="submit" href="<spring:url value="/logout"/>" class="waves-effect waves-green btn">Log Out</button>
+            <secure:csrfInput/>
+        </div>
+    </form>
+</div>
 <!-- Modal Structure -->
 <div id="modal1" class="modal">
     <form action="<spring:url value="/login"/>" method="POST">
@@ -68,6 +83,7 @@
             </div>
             <div>
                 <label>Password<input name="custom_password"  required type="password"/></label>
+                <secure:csrfInput/>
             </div>
         </div>
         <div class="modal-footer">
