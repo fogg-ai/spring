@@ -52,7 +52,7 @@ public class Teacher implements UserDetails {
     @Length(max = 50)
     private String role;
 
-    @ManyToMany(mappedBy = "teachers", fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "teachers", fetch = FetchType.EAGER,cascade = CascadeType.MERGE)
     List<Group> groups = new ArrayList<>();
 
     public Teacher groups(List<Group> groups) {

@@ -44,6 +44,19 @@
             </div>
             <div class="row">
                 <div class="input-field col s6">
+                    <form:input path="teacherName" required="required" class="validate"/>
+                    <form:label path="teacherName">Login</form:label>
+                    <form:errors path="teacherName" class="helper-text" data-error="wrong" data-success="right"/>
+                </div>
+                <div class="input-field col s6">
+                    <form:input path="password" required="required" class="validate"/>
+                    <form:label path="password">Password</form:label>
+                    <form:errors path="password" class="helper-text" data-error="wrong" data-success="right"/>
+                </div>
+                <input type="hidden" name="role" value="ROLE_TEACHER"/>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
                     <button type="submit" class="btn">Save<i class="material-icons right">send</i></button>
                 </div>
             </div>
