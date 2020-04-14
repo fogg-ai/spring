@@ -1,0 +1,6 @@
+{
+"servlet":"DispatcherServlet",
+"message":"Not Found",
+"url":"/spring-binding-data/api/students",
+"status":"404"
+}
