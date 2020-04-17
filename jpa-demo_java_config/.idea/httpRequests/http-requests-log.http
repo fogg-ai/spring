@@ -1,0 +1,325 @@
+GET http://localhost:8080/api/students
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/students
+Accept: application/json
+
+<> 2020-02-26T093025.200.json
+
+###
+
+GET http://localhost:8080/api/students
+Accept: application/xml
+
+<> 2020-02-26T093016.200.xml
+
+###
+
+GET http://localhost:8080/api/students
+Accept: application/json
+
+<> 2020-02-26T093012.200.json
+
+###
+
+GET http://localhost:8080/api/students
+Accept: application/xml
+
+<> 2020-02-26T092451.200.xml
+
+###
+
+GET http://localhost:8080/api/students
+Accept: application/json
+
+<> 2020-02-26T092426.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-26T092416.404.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+
+<> 2020-02-26T082907.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/xml
+
+<> 2020-02-26T082900.200.xml
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-26T082835.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-26T082832.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-26T082110.200.json
+
+###
+
+DELETE http://localhost:8080/spring-binding-data/api/students/2
+
+###
+
+DELETE http://localhost:8080/spring-binding-data/api/students/1
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-26T082044.200.json
+
+###
+
+DELETE http://localhost:8080/spring-binding-data/api/students/1
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-26T082024.200.json
+
+###
+
+POST http://localhost:8080/spring-binding-data/api/students
+Content-Type: application/json
+
+{
+  "firstName": "Паша",
+  "lastName": "Вишнев",
+  "age": 35,
+  "group": "ЕКО 20-П-3"
+}
+
+<> 2020-02-26T082020.201.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-26T082013.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-26T070950.200.json
+
+###
+
+POST http://localhost:8080/spring-binding-data/api/students
+Content-Type: application/json
+
+{
+  "firstName": "Паша",
+  "lastName": "Вишнев",
+  "age": 35,
+  "group": "ЕКО 20-П-3"
+}
+
+<> 2020-02-26T070937.201.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students/2
+Accept: application/json
+
+<> 2020-02-26T070931.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-26T070906.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-24T091416.200.json
+
+###
+
+POST http://localhost:8080/spring-binding-data/api/students
+Content-Type: application/json
+
+{
+  "firstName": "Паша",
+  "lastName": "Вишнев",
+  "age": 35,
+  "group": "ЕКО 20-П-3"
+}
+
+<> 2020-02-24T091411.201.json
+
+###
+
+POST http://localhost:8080/spring-binding-data/api/students
+Content-Type: application/json
+
+{
+  "firstName": "Паша",
+  "lastName": "Вишнев",
+  "age": 35,
+  "group": "ЕКО 20-П-3"
+}
+
+<> 2020-02-24T091342.201.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students/2
+Accept: application/json
+
+<> 2020-02-24T091319.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students/2
+Accept: application/json
+
+<> 2020-02-24T091051.200.json
+
+###
+
+POST http://localhost:8080/spring-binding-data/api/students
+Content-Type: application/json
+
+{
+  "firstName": "Паша",
+  "lastName": "Вишнев",
+  "age": 35,
+  "group": "ЕКО 20-П-3"
+}
+
+<> 2020-02-24T090950.500.html
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-24T090928.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-24T085829.200.json
+
+###
+
+POST http://localhost:8080/spring-binding-data/api/students
+Content-Type: application/json
+
+{
+  "firstName": "Паша",
+  "lastName": "Вишнев",
+  "age": 35,
+  "group": "ЕКО 20-П-3"
+}
+
+<> 2020-02-24T085710.201.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students/2
+Accept: application/json
+
+<> 2020-02-24T085519.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-24T085514.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-24T084634.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students/2
+Accept: application/json
+
+<> 2020-02-24T084502.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students/1
+Accept: application/json
+
+<> 2020-02-24T084445.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-24T084124.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students
+Accept: application/json
+
+<> 2020-02-24T083101.200.json
+
+###
+
+GET http://localhost:8080/spring-binding-data/api/students/1
+Accept: application/json
+
+<> 2020-02-24T083012.200.json
+
+###
+
+GET http://localhost:8080/api/students/1
+Accept: application/json
+
+###
+
